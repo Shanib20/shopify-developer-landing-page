@@ -1,0 +1,56 @@
+<section class="category-tabs" id="shop">
+  <div class="container">
+    <div class="category-tabs__row" role="tablist" aria-label="Product categories">
+      {% for block in section.blocks %}
+        <button
+          type="button"
+          role="tab"
+          class="category-tabs__tab"
+          data-tab-value="{{ block.settings.handle }}"
+          aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+          tabindex="{% if forloop.first %}0{% else %}-1{% endif %}">
+          {% render 'arch-shape', active: forloop.first %}
+          <span class="category-tabs__label">{{ block.settings.label }}</span>
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{{ 'category-tabs.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'tabs.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Category tabs",
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "New Arrivals" },
+        { "type": "text", "id": "handle", "label": "Collection handle (filter value)", "default": "new-arrivals" }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "tab", "settings": { "label": "New Arrivals", "handle": "new-arrivals" } },
+      { "type": "tab", "settings": { "label": "Best Sellers", "handle": "best-sellers" } },
+      { "type": "tab", "settings": { "label": "Festive Edit", "handle": "festive-edit" } },
+      { "type": "tab", "settings": { "label": "Accessories", "handle": "accessories" } }
+    ]
+  },
+  "presets": [
+    {
+      "name": "Category tabs",
+      "blocks": [
+        { "type": "tab", "settings": { "label": "New Arrivals", "handle": "new-arrivals" } },
+        { "type": "tab", "settings": { "label": "Best Sellers", "handle": "best-sellers" } },
+        { "type": "tab", "settings": { "label": "Festive Edit", "handle": "festive-edit" } },
+        { "type": "tab", "settings": { "label": "Accessories", "handle": "accessories" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

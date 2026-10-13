@@ -1,0 +1,66 @@
+<section class="categories" id="categories">
+  <div class="container categories__header">
+    <p class="eyebrow">Shop the Edit</p>
+    <h2 class="h2">Shop by Category</h2>
+  </div>
+  <div class="container">
+    <div class="categories__row">
+      {% for block in section.blocks %}
+        {% assign default_asset = block.settings.name | handleize | prepend: 'category-' | append: '.png' %}
+        <a href="{% if block.settings.link != blank %}{{ block.settings.link }}{% else %}#wishlist{% endif %}" class="categories__tile reveal">
+          <div class="categories__media">
+            {% if block.settings.image %}
+              {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '400,800', alt: block.settings.name }}
+            {% else %}
+              <img src="{{ default_asset | asset_url }}" alt="{{ block.settings.name }}" loading="lazy" width="800" height="1000">
+            {% endif %}
+          </div>
+          <div class="categories__label">
+            <span class="categories__name">{{ block.settings.name }}</span>
+            <span class="categories__arrow">{% render 'icon-caret', direction: 'right', size: 16 %}</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{{ 'categories.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Categories",
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "name", "label": "Name", "default": "Jewelry" },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "category", "settings": { "name": "Jewelry" } },
+      { "type": "category", "settings": { "name": "Apparel" } },
+      { "type": "category", "settings": { "name": "Footwear" } },
+      { "type": "category", "settings": { "name": "Home" } },
+      { "type": "category", "settings": { "name": "Accessories" } }
+    ]
+  },
+  "presets": [
+    {
+      "name": "Categories",
+      "blocks": [
+        { "type": "category", "settings": { "name": "Jewelry" } },
+        { "type": "category", "settings": { "name": "Apparel" } },
+        { "type": "category", "settings": { "name": "Footwear" } },
+        { "type": "category", "settings": { "name": "Home" } },
+        { "type": "category", "settings": { "name": "Accessories" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,42 @@
+/* Preview-only: lightweight hash router for footer/info pages. Not part of
+   the Shopify theme — theme/ renders real Shopify pages via merchant-
+   configurable menus instead (see footer.liquid). */
+
+.info-overlay[hidden] { display: none; }
+.info-overlay { background: var(--color-background); padding: var(--space-7) 0 var(--space-9); }
+
+.info-overlay__header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-6); padding-bottom: var(--space-4); border-bottom: 1px solid var(--color-border); }
+.info-overlay__breadcrumb { margin: 0; font-size: 13px; color: var(--color-muted-foreground); }
+.info-overlay__breadcrumb a { border-bottom: 1px solid transparent; transition: border-color var(--motion-micro) var(--ease-standard); }
+.info-overlay__breadcrumb a:hover { border-color: var(--color-accent); }
+.info-overlay__back { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-accent); display: inline-flex; align-items: center; gap: var(--space-2); }
+
+.info-page { max-width: 720px; }
+.info-page[hidden] { display: none; }
+.info-page h1 { margin: 0 0 var(--space-5); }
+.info-page__notice {
+  background: var(--color-muted); border-left: 3px solid var(--color-accent-deep);
+  padding: var(--space-3) var(--space-4); font-size: 13px; color: var(--color-secondary); margin: 0 0 var(--space-5);
+}
+.info-page p { color: var(--color-secondary); margin: 0 0 var(--space-4); }
+.info-page h2 { font-family: var(--font-display); font-size: 22px; font-weight: 600; margin: var(--space-6) 0 var(--space-3); }
+.info-page ul { margin: 0 0 var(--space-4); padding-left: 1.2em; color: var(--color-secondary); }
+.info-page li { margin-bottom: var(--space-2); }
+.info-page .text-link { margin-top: var(--space-3); }
+
+.info-page__faq-item { border-bottom: 1px solid var(--color-border); padding: var(--space-4) 0; }
+.info-page__faq-item summary { cursor: pointer; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); }
+.info-page__faq-item summary::-webkit-details-marker { display: none; }
+.info-page__faq-item summary::after { content: '+'; font-size: 18px; color: var(--color-accent); flex-shrink: 0; }
+.info-page__faq-item[open] summary::after { content: '\2212'; }
+.info-page__faq-item p { margin-top: var(--space-3); }
+
+.info-page__form { display: flex; flex-direction: column; gap: var(--space-4); max-width: 420px; margin-top: var(--space-5); }
+.info-page__field { display: flex; flex-direction: column; gap: var(--space-2); }
+.info-page__field label { font-size: 13px; font-weight: 500; }
+.info-page__field input, .info-page__field textarea {
+  border: 1px solid var(--color-border); border-radius: 2px; padding: var(--space-3);
+  font-family: inherit; font-size: 14px; background: var(--color-surface); color: var(--color-foreground);
+}
+.info-page__field input:focus, .info-page__field textarea:focus { outline: 2px solid var(--color-ring); outline-offset: 1px; }
+.info-page__form-success { color: var(--color-accent); font-weight: 500; }

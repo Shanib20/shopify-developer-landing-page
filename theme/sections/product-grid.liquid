@@ -1,0 +1,69 @@
+<section class="product-grid-section" id="wishlist">
+  <div class="container">
+    <h2 class="h2" data-product-grid-heading>{{ section.settings.heading }}</h2>
+    <div class="product-grid" data-product-grid>
+      {% if section.settings.collection != blank %}
+        {% for product in section.settings.collection.products limit: 12 %}
+          {% render 'product-card', product: product %}
+        {% endfor %}
+      {% else %}
+        {% assign sample_products = 'Zardozi Silk Scarf|320000|0|new,new-arrivals|zardozi-silk-scarf|Hand-embroidered in fine silk with gold zardozi threadwork along the border, finished by artisans using techniques passed down through generations.|Heritage Tote|480000|620000|sale,best-sellers|heritage-tote|Structured full-grain leather with solid brass hardware, built to carry everything from a day at the studio to an evening out.|Brocade Jacket|850000|0|festive-edit|brocade-jacket|A tailored silhouette in rich brocade, woven with a subtle sheen that catches the light without ever feeling loud.|Kundan Earrings|180000|0|accessories|kundan-earrings|Classic kundan-set drops in gold, light enough for daily wear and refined enough for an evening occasion.' | split: '|' %}
+        {% for i in (0..3) %}
+          {% assign offset = i | times: 6 %}
+          {% assign name = sample_products[offset] %}
+          {% assign price_cents = sample_products[offset | plus: 1] | times: 1 %}
+          {% assign compare_cents = sample_products[offset | plus: 2] | times: 1 %}
+          {% assign tags = sample_products[offset | plus: 3] | split: ',' %}
+          {% assign handle = sample_products[offset | plus: 4] %}
+          {% assign description = sample_products[offset | plus: 5] %}
+          <article class="product-card" data-product-collections="{{ tags | last }}" data-quick-view-description="{{ description }}">
+            <div class="product-card__media">
+              <img class="product-card__image--primary" src="{{ 'product-' | append: handle | append: '.png' | asset_url }}" alt="{{ name }}" loading="lazy" width="600" height="800">
+              <img class="product-card__image--secondary" src="{{ 'product-' | append: handle | append: '-alt.png' | asset_url }}" alt="{{ name }}" loading="lazy" width="600" height="800">
+              <div class="product-card__badges">
+                {% if compare_cents > price_cents %}
+                  <span class="product-card__badge product-card__badge--sale">Sale</span>
+                {% elsif tags contains 'new' %}
+                  <span class="product-card__badge product-card__badge--new">New</span>
+                {% endif %}
+              </div>
+              <button type="button" class="product-card__wishlist" data-wishlist-toggle data-product-id="sample-{{ handle }}" aria-label="Add {{ name }} to wishlist" aria-pressed="false">
+                <span class="product-card__wishlist-icon product-card__wishlist-icon--outline">{% render 'icon-heart', size: 18 %}</span>
+                <span class="product-card__wishlist-icon product-card__wishlist-icon--filled">{% render 'icon-heart', size: 18, filled: true %}</span>
+              </button>
+              <button type="button" class="product-card__quick-view" data-quick-view-trigger>Quick View</button>
+            </div>
+            <h3 class="product-card__title">{{ name }}</h3>
+            <div class="product-card__price-row">
+              <p class="product-card__price">{{ price_cents | money }}</p>
+              {% if compare_cents > price_cents %}
+                <p class="product-card__compare-price">{{ compare_cents | money }}</p>
+              {% endif %}
+            </div>
+            <button type="button" class="btn btn--primary product-card__add" disabled title="Select a collection in the theme editor to make this a real, purchasable product">
+              {% render 'icon-cart-small' %} Add to Cart
+            </button>
+          </article>
+        {% endfor %}
+      {% endif %}
+    </div>
+    {% if section.settings.collection == blank %}
+      <p class="product-grid__notice">Showing sample products — select a collection in the theme editor to display real, purchasable products.</p>
+    {% endif %}
+    <p class="product-grid__empty" data-product-grid-empty hidden>No products in this category yet.</p>
+  </div>
+</section>
+
+{{ 'product-grid.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'wishlist.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Product grid",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "New Arrivals" },
+    { "type": "collection", "id": "collection", "label": "Collection" }
+  ],
+  "presets": [{ "name": "Product grid" }]
+}
+{% endschema %}

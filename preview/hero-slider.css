@@ -1,0 +1,74 @@
+.hero-slider { position: relative; overflow: hidden; }
+.hero-slider__track { position: relative; aspect-ratio: 16/9; }
+@media (min-width: 768px) { .hero-slider__track { aspect-ratio: 21/9; } }
+.hero-slider__slide {
+  position: absolute; inset: 0; opacity: 0; transition: opacity var(--motion-hero) var(--ease-standard);
+  pointer-events: none;
+}
+.hero-slider__slide.is-active { opacity: 1; pointer-events: auto; }
+.hero-slider__slide img, .hero-slider__placeholder {
+  width: 100%; height: 100%; object-fit: cover; background: var(--color-primary);
+  transform: scale(1);
+  transition: transform 7s linear;
+}
+.hero-slider__slide.is-active img, .hero-slider__slide.is-active .hero-slider__placeholder { transform: scale(1.06); }
+.hero-slider__scrim { position: absolute; inset: 0; background: linear-gradient(to right, rgba(41,37,31,0.8), rgba(41,37,31,0.4) 60%, rgba(41,37,31,0.15)); }
+.hero-slider__content {
+  position: absolute; inset: 0; margin: 0; display: flex; flex-direction: column; justify-content: center; gap: var(--space-3);
+  max-width: 560px; padding-left: 20px; padding-right: 20px; color: var(--color-on-primary);
+}
+.hero-slider__eyebrow {
+  font-family: var(--font-body); font-weight: 600; font-size: 12px;
+  text-transform: uppercase; letter-spacing: 0.16em; color: var(--color-accent-deep); margin: 0;
+}
+.hero-slider__content .h1, .hero-slider__content .body-text, .hero-slider__eyebrow, .hero-slider__cta {
+  opacity: 0; transform: translateY(16px);
+  transition: opacity var(--motion-reveal) var(--ease-standard), transform var(--motion-reveal) var(--ease-standard);
+}
+.hero-slider__eyebrow { transition-delay: 150ms; }
+.hero-slider__content .h1 { transition-delay: 250ms; }
+.hero-slider__content .body-text { transition-delay: 350ms; }
+.hero-slider__cta { transition-delay: 450ms; }
+.hero-slider__slide.is-active .hero-slider__eyebrow,
+.hero-slider__slide.is-active .hero-slider__content .h1,
+.hero-slider__slide.is-active .hero-slider__content .body-text,
+.hero-slider__slide.is-active .hero-slider__cta {
+  opacity: 1; transform: translateY(0);
+}
+.hero-slider__cta { gap: var(--space-2); padding: 0 var(--space-4); width: fit-content; }
+@media (min-width: 768px) { .hero-slider__content { padding-left: 24px; padding-right: 72px; } }
+@media (min-width: 1024px) { .hero-slider__content { padding-left: 48px; padding-right: 48px; } }
+.hero-slider__arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+  min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center;
+  background: rgba(253,251,247,0.85); border-radius: 50%; color: var(--color-primary);
+}
+.hero-slider__arrow--prev { left: var(--space-2); }
+.hero-slider__arrow--next { right: var(--space-2); }
+@media (min-width: 768px) {
+  .hero-slider__arrow { display: flex; }
+  .hero-slider__arrow--prev { left: var(--space-4); }
+  .hero-slider__arrow--next { right: var(--space-4); }
+}
+@media (max-width: 767px) {
+  .hero-slider__arrow { display: none; }
+}
+.hero-slider__dots { position: absolute; bottom: var(--space-4); left: 0; right: 0; display: flex; justify-content: center; gap: var(--space-2); z-index: 2; }
+.hero-slider__dot { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; }
+.hero-slider__dot-progress {
+  position: relative; display: block; width: 28px; height: 2px; background: rgba(245,239,228,0.35); border-radius: 1px; overflow: hidden;
+}
+.hero-slider__dot-progress::after {
+  content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 0%;
+  background: var(--color-accent-deep);
+}
+@keyframes hero-progress-fill { from { width: 0%; } to { width: 100%; } }
+.hero-slider__dot.is-active .hero-slider__dot-progress::after { animation: hero-progress-fill 5.5s linear forwards; }
+.hero-slider__dot.is-paused .hero-slider__dot-progress::after { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slider__slide, .hero-slider__slide img, .hero-slider__content .h1, .hero-slider__content .body-text, .hero-slider__eyebrow, .hero-slider__cta, .hero-slider__dot-progress::after {
+    transition: none;
+  }
+  .hero-slider__slide.is-active img { transform: none; }
+}

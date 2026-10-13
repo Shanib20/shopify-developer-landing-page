@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": { "menu": "main-menu" }
+    },
+    "category-tabs": {
+      "type": "category-tabs",
+      "blocks": {
+        "tab-1": { "type": "tab", "settings": { "label": "New Arrivals", "handle": "new-arrivals" } },
+        "tab-2": { "type": "tab", "settings": { "label": "Best Sellers", "handle": "best-sellers" } },
+        "tab-3": { "type": "tab", "settings": { "label": "Festive Edit", "handle": "festive-edit" } },
+        "tab-4": { "type": "tab", "settings": { "label": "Accessories", "handle": "accessories" } }
+      },
+      "block_order": ["tab-1", "tab-2", "tab-3", "tab-4"]
+    },
+    "hero-slider": {
+      "type": "hero-slider",
+      "blocks": {
+        "slide-1": { "type": "slide", "settings": { "eyebrow": "The Autumn / Winter Collection", "heading": "The Festive Edit", "subtext": "Heritage-inspired pieces for the season.", "cta_label": "Explore the Collection", "tab_handle": "festive-edit" } },
+        "slide-2": { "type": "slide", "settings": { "eyebrow": "Just In", "heading": "New Arrivals", "subtext": "Fresh silhouettes, timeless craft.", "cta_label": "Shop New Arrivals", "tab_handle": "new-arrivals" } }
+      },
+      "block_order": ["slide-1", "slide-2"]
+    },
+    "categories": {
+      "type": "categories",
+      "blocks": {
+        "cat-1": { "type": "category", "settings": { "name": "Jewelry" } },
+        "cat-2": { "type": "category", "settings": { "name": "Apparel" } },
+        "cat-3": { "type": "category", "settings": { "name": "Footwear" } },
+        "cat-4": { "type": "category", "settings": { "name": "Home" } },
+        "cat-5": { "type": "category", "settings": { "name": "Accessories" } }
+      },
+      "block_order": ["cat-1", "cat-2", "cat-3", "cat-4", "cat-5"]
+    },
+    "product-grid": {
+      "type": "product-grid",
+      "settings": { "heading": "New Arrivals" }
+    },
+    "brand-story": {
+      "type": "brand-story",
+      "blocks": {
+        "story-1": { "type": "story", "settings": { "eyebrow": "The Craft", "heading": "Rooted in Craft", "body": "Every piece is made with techniques passed down through generations.", "link_label": "Discover the Story" } },
+        "story-2": { "type": "story", "settings": { "eyebrow": "The Materials", "heading": "Made to Last", "body": "We choose materials for how they age, not just how they look on day one.", "link_label": "See Our Process" } },
+        "story-3": { "type": "story", "settings": { "eyebrow": "The Silhouette", "heading": "A Modern Heritage", "body": "Classic silhouettes, reimagined for how you actually dress today.", "link_label": "Explore the Edit" } }
+      },
+      "block_order": ["story-1", "story-2", "story-3"]
+    },
+    "footer": {
+      "type": "footer",
+      "settings": { "menu_1": "footer", "menu_2": "footer", "menu_3": "footer", "menu_4": "footer" },
+      "blocks": {
+        "social-1": { "type": "social", "settings": { "network": "instagram" } },
+        "social-2": { "type": "social", "settings": { "network": "facebook" } },
+        "social-3": { "type": "social", "settings": { "network": "tiktok" } },
+        "social-4": { "type": "social", "settings": { "network": "x" } }
+      },
+      "block_order": ["social-1", "social-2", "social-3", "social-4"]
+    }
+  },
+  "order": ["header", "category-tabs", "hero-slider", "categories", "product-grid", "brand-story", "footer"]
+}

@@ -1,0 +1,31 @@
+:root {
+  --color-primary: #29251F;
+  --color-on-primary: #F5EFE4;
+  --color-secondary: #4A4038;
+  --color-accent: #762F2B;
+  --color-accent-hover: #5C2420;
+  --color-accent-deep: #C5A46D;
+  --color-accent-deep-dark: #A5825A;
+  --color-background: #F5EFE4;
+  --color-surface: #FDFBF7;
+  --color-foreground: #29251F;
+  --color-muted: #EDE4D3;
+  --color-muted-foreground: #6B5F52;
+  --color-border: #DED0B8;
+  --color-destructive: #B3261E;
+  --color-ring: #762F2B;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px;
+
+  --font-display: 'Cormorant', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* Motion system: a fixed small set of durations, not custom per-component. */
+  --motion-micro: 200ms;
+  --motion-card: 300ms;
+  --motion-drawer: 350ms;
+  --motion-hero: 800ms;
+  --motion-reveal: 500ms;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}

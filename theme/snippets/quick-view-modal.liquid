@@ -1,0 +1,40 @@
+<div class="quick-view" data-quick-view-modal hidden>
+  <div class="quick-view__backdrop" data-quick-view-backdrop></div>
+  <div class="quick-view__panel" role="dialog" aria-modal="true" aria-label="Quick view">
+    <button type="button" class="quick-view__close" data-quick-view-close aria-label="Close quick view">
+      {% render 'icon-close' %}
+    </button>
+    <div class="quick-view__media">
+      <img data-quick-view-image alt="" width="600" height="800">
+    </div>
+    <div class="quick-view__details">
+      <p class="product-card__badge" data-quick-view-badge hidden></p>
+      <h2 class="h2" data-quick-view-title></h2>
+      <div class="product-card__price-row">
+        <p class="product-card__price" data-quick-view-price></p>
+        <p class="product-card__compare-price" data-quick-view-compare hidden></p>
+      </div>
+      <p class="body-text quick-view__description" data-quick-view-description></p>
+      <div class="quick-view__qty">
+        <span class="quick-view__qty-label">Quantity</span>
+        <div class="quick-view__qty-controls">
+          <button type="button" data-quick-view-qty-decrease aria-label="Decrease quantity">{{ "−" }}</button>
+          <span data-quick-view-qty>1</span>
+          <button type="button" data-quick-view-qty-increase aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+      <div class="quick-view__actions">
+        <button type="button" class="btn btn--primary quick-view__add" data-quick-view-add>
+          {% render 'icon-cart-small' %} Add to Cart
+        </button>
+        <button type="button" class="product-card__wishlist quick-view__wishlist" data-quick-view-wishlist aria-label="Add to wishlist" aria-pressed="false">
+          <span class="product-card__wishlist-icon product-card__wishlist-icon--outline">{% render 'icon-heart', size: 18 %}</span>
+          <span class="product-card__wishlist-icon product-card__wishlist-icon--filled">{% render 'icon-heart', size: 18, filled: true %}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ 'quick-view.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'quick-view.js' | asset_url }}" defer></script>

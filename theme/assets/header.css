@@ -1,0 +1,68 @@
+.site-header {
+  background: var(--color-surface); border-bottom: 1px solid transparent;
+  position: sticky; top: 0; z-index: 40;
+  transition: box-shadow var(--motion-micro) var(--ease-standard), border-color var(--motion-micro) var(--ease-standard);
+}
+.site-header.is-scrolled { border-bottom-color: var(--color-border); box-shadow: 0 2px 10px rgba(41,37,31,0.06); }
+.site-header__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-2); padding: var(--space-3) 0;
+}
+.site-header__logo { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; }
+.site-header__logo .h2 { font-size: 22px; }
+.site-header__descriptor {
+  display: none; font-size: 9px; font-weight: 500; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--color-muted-foreground); margin-top: 2px;
+}
+@media (min-width: 480px) {
+  .site-header__logo .h2 { font-size: 26px; }
+  .site-header__descriptor { display: block; }
+}
+.site-header__search { display: none; align-items: center; gap: var(--space-2); border: 1px solid var(--color-border); border-radius: 4px; padding: var(--space-2) var(--space-3); flex: 1; max-width: 360px; }
+.site-header__search input { border: none; outline: none; width: 100%; font: inherit; }
+.site-header__search:focus-within { outline: 2px solid var(--color-ring); outline-offset: 2px; }
+.site-header__nav ul { display: flex; gap: var(--space-5); list-style: none; margin: 0; padding: 0; }
+.site-header__nav a { font-family: var(--font-body); font-weight: 500; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; }
+.site-header__icons { display: flex; align-items: center; gap: var(--space-1); }
+.site-header__icons a, .site-header__menu-trigger, .site-header__search-trigger { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; position: relative; }
+.site-header__cart-count { position: absolute; top: 2px; right: 2px; background: var(--color-accent); color: var(--color-on-primary); font-size: 10px; border-radius: 50%; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; }
+
+/* Below ~400px there isn't room for all 5 icon buttons plus the logo without
+   overflow, so account/wishlist move into the mobile nav panel instead. */
+@media (max-width: 399px) {
+  .site-header__icon--secondary { display: none; }
+}
+@media (min-width: 400px) {
+  .site-header__icons { gap: var(--space-2); }
+}
+@media (min-width: 480px) {
+  .site-header__icons { gap: var(--space-4); }
+}
+
+.site-header__mobile-panel .site-header__panel-icons { font-size: 16px; gap: var(--space-3); border-top: 1px solid var(--color-border); padding-top: var(--space-4); }
+.site-header__panel-icons a { display: flex; align-items: center; gap: var(--space-2); }
+@media (min-width: 1024px) {
+  .site-header__panel-icons { display: none; }
+}
+
+.site-header__nav, .site-header__search { display: none; }
+
+.site-header__mobile-search { border-top: 1px solid var(--color-border); padding: var(--space-3) 0; }
+.site-header__mobile-search[hidden] { display: none; }
+.site-header__mobile-search-inner { display: flex; align-items: center; gap: var(--space-2); border: 1px solid var(--color-border); border-radius: 4px; padding: var(--space-2) var(--space-3); }
+.site-header__mobile-search-inner input { border: none; outline: none; width: 100%; font: inherit; }
+.site-header__mobile-search:focus-within { outline: 2px solid var(--color-ring); outline-offset: 2px; }
+
+.site-header__backdrop { position: fixed; inset: 0; background: rgba(12,10,9,0.5); z-index: 49; }
+.site-header__backdrop[hidden] { display: none; }
+.site-header__mobile-panel {
+  position: fixed; top: 0; right: 0; bottom: 0; width: min(320px, 85vw);
+  background: var(--color-surface); padding: var(--space-5); z-index: 50; overflow-y: auto;
+}
+.site-header__mobile-panel[hidden] { display: none; }
+.site-header__mobile-panel ul { list-style: none; padding: 0; margin: var(--space-6) 0 0; display: flex; flex-direction: column; gap: var(--space-4); font-family: var(--font-display); font-size: 24px; }
+
+@media (min-width: 1024px) {
+  .site-header__search, .site-header__nav { display: flex; }
+  .site-header__menu-trigger, .site-header__search-trigger, .site-header__mobile-search { display: none; }
+}

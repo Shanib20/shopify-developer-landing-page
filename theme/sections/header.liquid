@@ -1,0 +1,87 @@
+{% if section.settings.announcement_text != blank %}
+  <div class="announcement-bar">
+    <a href="#shop">{{ section.settings.announcement_text }}</a>
+  </div>
+{% endif %}
+
+<header class="site-header" data-site-header>
+  <div class="container site-header__inner">
+    <a href="{{ routes.root_url }}" class="site-header__logo" aria-label="{{ shop.name }} home">
+      {% if section.settings.logo %}
+        {{ section.settings.logo | image_url: width: 160 | image_tag: loading: 'eager', alt: shop.name }}
+      {% else %}
+        <span class="h2">{{ shop.name }}</span>
+        {% if section.settings.descriptor != blank %}
+          <span class="site-header__descriptor">{{ section.settings.descriptor }}</span>
+        {% endif %}
+      {% endif %}
+    </a>
+
+    <form action="{{ routes.search_url }}" method="get" class="site-header__search" role="search">
+      {% render 'icon-search', size: 18 %}
+      <input type="search" name="q" placeholder="Search products" aria-label="Search products">
+    </form>
+
+    <nav class="site-header__nav" aria-label="Primary">
+      <ul>
+        {% for link in section.settings.menu.links %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <div class="site-header__icons">
+      <button type="button" class="site-header__search-trigger" data-mobile-search-trigger aria-label="Open search" aria-expanded="false">
+        {% render 'icon-search', size: 20 %}
+      </button>
+      <a href="{{ routes.account_url }}" class="site-header__icon--secondary" aria-label="Account">{% render 'icon-user' %}</a>
+      <a href="{{ routes.root_url }}#wishlist" class="site-header__icon--secondary" aria-label="Wishlist">{% render 'icon-heart' %}</a>
+      <a href="{{ routes.cart_url }}" class="site-header__cart" data-cart-drawer-trigger aria-label="Cart, {{ cart.item_count }} items">
+        {% render 'icon-cart' %}
+        <span class="site-header__cart-count" data-cart-count>{{ cart.item_count }}</span>
+      </a>
+      <button type="button" class="site-header__menu-trigger" data-mobile-menu-trigger aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu-panel">
+        {% render 'icon-list' %}
+      </button>
+    </div>
+  </div>
+
+  <form action="{{ routes.search_url }}" method="get" class="site-header__mobile-search" data-mobile-search-panel role="search" hidden>
+    <div class="container site-header__mobile-search-inner">
+      {% render 'icon-search', size: 18 %}
+      <input type="search" name="q" placeholder="Search products" aria-label="Search products">
+    </div>
+  </form>
+
+  <div class="site-header__backdrop" data-mobile-menu-backdrop hidden></div>
+  <div class="site-header__mobile-panel" id="mobile-menu-panel" data-mobile-menu-panel role="dialog" aria-modal="true" aria-label="Site navigation" hidden>
+    <button type="button" class="site-header__menu-close" data-mobile-menu-close aria-label="Close menu">
+      {% render 'icon-close' %}
+    </button>
+    <ul>
+      {% for link in section.settings.menu.links %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+    <ul class="site-header__panel-icons">
+      <li><a href="{{ routes.account_url }}">{% render 'icon-user', size: 18 %} Account</a></li>
+      <li><a href="{{ routes.root_url }}#wishlist">{% render 'icon-heart', size: 18 %} Wishlist</a></li>
+    </ul>
+  </div>
+</header>
+
+{{ 'announcement-bar.css' | asset_url | stylesheet_tag }}
+{{ 'header.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'header.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    { "type": "text", "id": "announcement_text", "label": "Announcement bar text", "default": "Complimentary shipping on orders over ₹5,000." },
+    { "type": "image_picker", "id": "logo", "label": "Logo" },
+    { "type": "text", "id": "descriptor", "label": "Wordmark descriptor", "default": "Objects of Heritage" },
+    { "type": "link_list", "id": "menu", "label": "Navigation menu", "default": "main-menu" }
+  ]
+}
+{% endschema %}

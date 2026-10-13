@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Heritage Modern Luxury — Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="category-tabs.css">
+  <link rel="stylesheet" href="hero-slider.css">
+  <link rel="stylesheet" href="categories.css">
+  <link rel="stylesheet" href="product-grid.css">
+  <link rel="stylesheet" href="brand-story.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="cart-drawer.css">
+  <link rel="stylesheet" href="announcement-bar.css">
+  <link rel="stylesheet" href="quick-view.css">
+  <link rel="stylesheet" href="info-pages.css">
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+</head>
+<body>
+  <div class="announcement-bar">
+    <a href="#shop">Complimentary shipping on orders over ₹5,000.</a>
+  </div>
+  <header class="site-header" data-site-header>
+    <div class="container site-header__inner">
+      <a href="#" class="site-header__logo" aria-label="Heritage home">
+        <span class="h2">Heritage</span>
+        <span class="site-header__descriptor">Objects of Heritage</span>
+      </a>
+
+      <form action="#" class="site-header__search" role="search">
+        <svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M229.66,218.34,179.6,168.28a88.21,88.21,0,1,0-11.32,11.32l50.06,50.06a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg>
+        <input type="search" name="q" placeholder="Search products" aria-label="Search products">
+      </form>
+
+      <nav class="site-header__nav" aria-label="Primary">
+        <ul>
+          <li><a href="#shop" data-nav-tab-trigger="new-arrivals">New Arrivals</a></li>
+          <li><a href="#shop" data-nav-tab-trigger="best-sellers">Best Sellers</a></li>
+          <li><a href="#shop" data-nav-tab-trigger="festive-edit">Festive Edit</a></li>
+          <li><a href="#shop" data-nav-tab-trigger="accessories">Accessories</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__icons">
+        <button type="button" class="site-header__search-trigger" data-mobile-search-trigger aria-label="Open search" aria-expanded="false">
+          <svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M229.66,218.34,179.6,168.28a88.21,88.21,0,1,0-11.32,11.32l50.06,50.06a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg>
+        </button>
+        <a href="#" class="site-header__icon--secondary" aria-label="Account"><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M230.92,212c-15.23-26.33-38.7-44.03-66.09-50.98a72,72,0,1,0-73.66,0c-27.39,6.95-50.86,24.65-66.09,50.98a8,8,0,1,0,13.84,8c18.84-32.56,52.14-52,89.08-52s70.24,19.44,89.08,52a8,8,0,1,0,13.84-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"/></svg></a>
+        <a href="#wishlist" class="site-header__icon--secondary" aria-label="Wishlist"><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40A62.07,62.07,0,0,0,16,102c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40Zm-50,174.8C108.6,204.2,32,163.1,32,102A46.06,46.06,0,0,1,78,56c19.15,0,34.52,10.08,42.63,24.08a8,8,0,0,0,13.74,0C142.48,66.08,157.85,56,177,56a46.06,46.06,0,0,1,46,46C223.95,163.1,147.4,204.2,128,214.8Z"/></svg></a>
+        <a href="#" class="site-header__cart" data-cart-drawer-trigger aria-label="Cart, 0 items">
+          <svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M223.69,60.47A8,8,0,0,0,217.05,56H54.22L45.86,24.21A8,8,0,0,0,37.83,18H16a8,8,0,0,0,0,16H31.34L58.77,146.1a28,28,0,1,0,37.46,25.9h39.55a27.69,27.69,0,0,0-2.78,16a28,28,0,1,0,27.9-30h8.76a8,8,0,0,0,7.8-6.24l24-104A8,8,0,0,0,223.69,60.47Z"/></svg>
+          <span class="site-header__cart-count" data-cart-count>0</span>
+        </a>
+        <button type="button" class="site-header__menu-trigger" data-mobile-menu-trigger aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu-panel">
+          <svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <form action="#" class="site-header__mobile-search" data-mobile-search-panel role="search" hidden>
+      <div class="container site-header__mobile-search-inner">
+        <svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M229.66,218.34,179.6,168.28a88.21,88.21,0,1,0-11.32,11.32l50.06,50.06a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg>
+        <input type="search" name="q" placeholder="Search products" aria-label="Search products">
+      </div>
+    </form>
+
+    <div class="site-header__backdrop" data-mobile-menu-backdrop hidden></div>
+    <div class="site-header__mobile-panel" id="mobile-menu-panel" data-mobile-menu-panel role="dialog" aria-modal="true" aria-label="Site navigation" hidden>
+      <button type="button" class="site-header__menu-close" data-mobile-menu-close aria-label="Close menu">
+        <svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+      </button>
+      <ul>
+        <li><a href="#shop" data-nav-tab-trigger="new-arrivals">New Arrivals</a></li>
+        <li><a href="#shop" data-nav-tab-trigger="best-sellers">Best Sellers</a></li>
+        <li><a href="#shop" data-nav-tab-trigger="festive-edit">Festive Edit</a></li>
+        <li><a href="#shop" data-nav-tab-trigger="accessories">Accessories</a></li>
+      </ul>
+      <ul class="site-header__panel-icons">
+        <li><a href="#"><svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M230.92,212c-15.23-26.33-38.7-44.03-66.09-50.98a72,72,0,1,0-73.66,0c-27.39,6.95-50.86,24.65-66.09,50.98a8,8,0,1,0,13.84,8c18.84-32.56,52.14-52,89.08-52s70.24,19.44,89.08,52a8,8,0,1,0,13.84-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"/></svg> Account</a></li>
+        <li><a href="#wishlist"><svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40A62.07,62.07,0,0,0,16,102c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40Zm-50,174.8C108.6,204.2,32,163.1,32,102A46.06,46.06,0,0,1,78,56c19.15,0,34.52,10.08,42.63,24.08a8,8,0,0,0,13.74,0C142.48,66.08,157.85,56,177,56a46.06,46.06,0,0,1,46,46C223.95,163.1,147.4,204.2,128,214.8Z"/></svg> Wishlist</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="category-tabs" id="shop">
+    <div class="container">
+      <div class="category-tabs__row" role="tablist" aria-label="Product categories">
+        <button type="button" role="tab" class="category-tabs__tab" data-tab-value="new-arrivals" aria-selected="true" tabindex="0">
+          <svg class="arch-shape arch-shape--active" viewBox="0 0 200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M4,70 L4,42 C4,30 30,22 70,16 C85,10 100,6 100,6 C100,6 115,10 130,16 C170,22 196,30 196,42 L196,70 Z" fill="var(--color-accent)" stroke="var(--color-accent-deep)" stroke-width="0"/></svg>
+          <span class="category-tabs__label">New Arrivals</span>
+        </button>
+        <button type="button" role="tab" class="category-tabs__tab" data-tab-value="best-sellers" aria-selected="false" tabindex="-1">
+          <svg class="arch-shape" viewBox="0 0 200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M4,70 L4,42 C4,30 30,22 70,16 C85,10 100,6 100,6 C100,6 115,10 130,16 C170,22 196,30 196,42 L196,70 Z" fill="var(--color-muted)" stroke="var(--color-accent-deep)" stroke-width="1"/></svg>
+          <span class="category-tabs__label">Best Sellers</span>
+        </button>
+        <button type="button" role="tab" class="category-tabs__tab" data-tab-value="festive-edit" aria-selected="false" tabindex="-1">
+          <svg class="arch-shape" viewBox="0 0 200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M4,70 L4,42 C4,30 30,22 70,16 C85,10 100,6 100,6 C100,6 115,10 130,16 C170,22 196,30 196,42 L196,70 Z" fill="var(--color-muted)" stroke="var(--color-accent-deep)" stroke-width="1"/></svg>
+          <span class="category-tabs__label">Festive Edit</span>
+        </button>
+        <button type="button" role="tab" class="category-tabs__tab" data-tab-value="accessories" aria-selected="false" tabindex="-1">
+          <svg class="arch-shape" viewBox="0 0 200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M4,70 L4,42 C4,30 30,22 70,16 C85,10 100,6 100,6 C100,6 115,10 130,16 C170,22 196,30 196,42 L196,70 Z" fill="var(--color-muted)" stroke="var(--color-accent-deep)" stroke-width="1"/></svg>
+          <span class="category-tabs__label">Accessories</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-slider" data-hero-slider aria-roledescription="carousel" aria-label="Featured collections">
+    <div class="hero-slider__track">
+      <div class="hero-slider__slide is-active" data-slide aria-hidden="false">
+        <img class="hero-slider__placeholder" src="../theme/assets/hero-the-festive-edit.png" alt="The Festive Edit" loading="eager">
+        <div class="hero-slider__scrim"></div>
+        <div class="hero-slider__content container">
+          <p class="hero-slider__eyebrow">The Autumn / Winter Collection</p>
+          <h2 class="h1">The Festive Edit</h2>
+          <p class="body-text">Heritage-inspired pieces for the season.</p>
+          <a href="#shop" data-nav-tab-trigger="festive-edit" class="btn btn--primary hero-slider__cta">Explore the Collection <svg viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" style="transform: scaleX(-1)"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></a>
+        </div>
+      </div>
+      <div class="hero-slider__slide" data-slide aria-hidden="true" inert>
+        <img class="hero-slider__placeholder" src="../theme/assets/hero-new-arrivals.png" alt="New Arrivals" loading="lazy">
+        <div class="hero-slider__scrim"></div>
+        <div class="hero-slider__content container">
+          <p class="hero-slider__eyebrow">Just In</p>
+          <h2 class="h1">New Arrivals</h2>
+          <p class="body-text">Fresh silhouettes, timeless craft.</p>
+          <a href="#shop" data-nav-tab-trigger="new-arrivals" class="btn btn--primary hero-slider__cta">Shop New Arrivals <svg viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" style="transform: scaleX(-1)"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="hero-slider__arrow hero-slider__arrow--prev" data-slide-prev aria-label="Previous slide"><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></button>
+    <button type="button" class="hero-slider__arrow hero-slider__arrow--next" data-slide-next aria-label="Next slide"><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" style="transform: scaleX(-1)"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></button>
+    <div class="hero-slider__dots" aria-label="Choose slide">
+      <button type="button" class="hero-slider__dot is-active" data-slide-dot aria-label="Go to slide 1" aria-current="true"><span class="hero-slider__dot-progress" data-slide-progress></span></button>
+      <button type="button" class="hero-slider__dot" data-slide-dot aria-label="Go to slide 2" aria-current="false"><span class="hero-slider__dot-progress" data-slide-progress></span></button>
+    </div>
+  </section>
+
+  <section class="categories" id="categories">
+    <div class="container categories__header">
+      <p class="eyebrow">Shop the Edit</p>
+      <h2 class="h2">Shop by Category</h2>
+    </div>
+    <div class="container">
+      <div class="categories__row">
+        <a href="#wishlist" class="categories__tile reveal">
+          <div class="categories__media"><img src="../theme/assets/category-jewelry.png" alt="Jewelry" loading="lazy"></div>
+          <div class="categories__label"><span class="categories__name">Jewelry</span><span class="categories__arrow"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" style="transform: scaleX(-1)"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span></div>
+        </a>
+        <a href="#wishlist" class="categories__tile reveal">
+          <div class="categories__media"><img src="../theme/assets/category-apparel.png" alt="Apparel" loading="lazy"></div>
+          <div class="categories__label"><span class="categories__name">Apparel</span><span class="categories__arrow"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" style="transform: scaleX(-1)"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span></div>
+        </a>
+        <a href="#wishlist" class="categories__tile reveal">
+          <div class="categories__media"><img src="../theme/assets/category-footwear.png" alt="Footwear" loading="lazy"></div>
+          <div class="categories__label"><span class="categories__name">Footwear</span><span class="categories__arrow"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" style="transform: scaleX(-1)"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span></div>
+        </a>
+        <a href="#wishlist" class="categories__tile reveal">
+          <div class="categories__media"><img src="../theme/assets/category-home.png" alt="Home" loading="lazy"></div>
+          <div class="categories__label"><span class="categories__name">Home</span><span class="categories__arrow"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" style="transform: scaleX(-1)"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span></div>
+        </a>
+        <a href="#wishlist" class="categories__tile reveal">
+          <div class="categories__media"><img src="../theme/assets/category-accessories.png" alt="Accessories" loading="lazy"></div>
+          <div class="categories__label"><span class="categories__name">Accessories</span><span class="categories__arrow"><svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" style="transform: scaleX(-1)"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-grid-section" id="wishlist">
+    <div class="container">
+      <h2 class="h2" data-product-grid-heading>New Arrivals</h2>
+      <div class="product-grid" data-product-grid>
+        <article class="product-card" data-product-collections="new-arrivals" data-quick-view-description="Hand-embroidered in fine silk with gold zardozi threadwork along the border, finished by artisans using techniques passed down through generations.">
+          <div class="product-card__media">
+            <a href="#" class="product-card__image-link" data-quick-view-trigger aria-label="View Zardozi Silk Scarf">
+              <img class="product-card__image--primary" src="../theme/assets/product-zardozi-silk-scarf.png" alt="Zardozi Silk Scarf" loading="lazy">
+              <img class="product-card__image--secondary" src="../theme/assets/product-zardozi-silk-scarf-alt.png" alt="Zardozi Silk Scarf" loading="lazy">
+            </a>
+            <div class="product-card__badges"><span class="product-card__badge product-card__badge--new">New</span></div>
+            <button type="button" class="product-card__wishlist" data-wishlist-toggle data-product-id="1" aria-label="Add Zardozi Silk Scarf to wishlist" aria-pressed="false">
+              <span class="product-card__wishlist-icon product-card__wishlist-icon--outline"><svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40A62.07,62.07,0,0,0,16,102c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40Z"/></svg></span><span class="product-card__wishlist-icon product-card__wishlist-icon--filled"><svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M240,102c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,228.66,16,172,16,102A62.07,62.07,0,0,1,78,40c20.65,0,38.73,8.88,50,23.89C139.27,48.88,157.35,40,178,40A62.07,62.07,0,0,1,240,102Z"/></svg></span>
+            </button>
+            <button type="button" class="product-card__quick-view" data-quick-view-trigger>Quick View</button>
+          </div>
+          <h3 class="product-card__title"><a href="#" data-quick-view-trigger>Zardozi Silk Scarf</a></h3>
+          <div class="product-card__price-row"><p class="product-card__price">₹3,200.00</p></div>
+          <button type="button" class="btn btn--primary product-card__add" data-add-to-cart data-product-id="zardozi-silk-scarf" data-product-price="320000" data-product-image="../theme/assets/product-zardozi-silk-scarf.png">
+            <svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M136,104V72a8,8,0,0,0-16,0v32H88a8,8,0,0,0,0,16h32v32a8,8,0,0,0,16,0V120h32a8,8,0,0,0,0-16Z"/><path d="M223.69,60.47A8,8,0,0,0,217.05,56H54.22L45.86,24.21A8,8,0,0,0,37.83,18H16a8,8,0,0,0,0,16H31.34L58.77,146.1a28,28,0,1,0,37.46,25.9h39.55a27.69,27.69,0,0,0-2.78,16H88a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16H96a12,12,0,1,1,12-12,8,8,0,0,0,8,8h8a8,8,0,0,0,8-8,12,12,0,1,1,12,12,8,8,0,0,0,0,16,28,28,0,1,0-25.9-38h-62.6l-3.69-16H188a8,8,0,0,0,7.8-6.24l24-104A8,8,0,0,0,223.69,60.47Z"/></svg>
+            Add to Cart
+          </button>
+        </article>
+        <article class="product-card" data-product-collections="best-sellers" data-quick-view-description="Structured full-grain leather with solid brass hardware, built to carry everything from a day at the studio to an evening out.">
+          <div class="product-card__media">
+            <a href="#" class="product-card__image-link" data-quick-view-trigger aria-label="View Heritage Tote">
+              <img class="product-card__image--primary" src="../theme/assets/product-heritage-tote.png" alt="Heritage Tote" loading="lazy">
+              <img class="product-card__image--secondary" src="../theme/assets/product-heritage-tote-alt.png" alt="Heritage Tote" loading="lazy">
+            </a>
+            <div class="product-card__badges"><span class="product-card__badge product-card__badge--sale">Sale</span></div>
+            <button type="button" class="product-card__wishlist" data-wishlist-toggle data-product-id="2" aria-label="Add Heritage Tote to wishlist" aria-pressed="false">
+              <span class="product-card__wishlist-icon product-card__wishlist-icon--outline"><svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40A62.07,62.07,0,0,0,16,102c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40Z"/></svg></span><span class="product-card__wishlist-icon product-card__wishlist-icon--filled"><svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M240,102c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,228.66,16,172,16,102A62.07,62.07,0,0,1,78,40c20.65,0,38.73,8.88,50,23.89C139.27,48.88,157.35,40,178,40A62.07,62.07,0,0,1,240,102Z"/></svg></span>
+            </button>
+            <button type="button" class="product-card__quick-view" data-quick-view-trigger>Quick View</button>
+          </div>
+          <h3 class="product-card__title"><a href="#" data-quick-view-trigger>Heritage Tote</a></h3>
+          <div class="product-card__price-row"><p class="product-card__price">₹4,800.00</p><p class="product-card__compare-price">₹6,200.00</p></div>
+          <button type="button" class="btn btn--primary product-card__add" data-add-to-cart data-product-id="heritage-tote" data-product-price="480000" data-product-image="../theme/assets/product-heritage-tote.png">
+            <svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M136,104V72a8,8,0,0,0-16,0v32H88a8,8,0,0,0,0,16h32v32a8,8,0,0,0,16,0V120h32a8,8,0,0,0,0-16Z"/><path d="M223.69,60.47A8,8,0,0,0,217.05,56H54.22L45.86,24.21A8,8,0,0,0,37.83,18H16a8,8,0,0,0,0,16H31.34L58.77,146.1a28,28,0,1,0,37.46,25.9h39.55a27.69,27.69,0,0,0-2.78,16H88a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16H96a12,12,0,1,1,12-12,8,8,0,0,0,8,8h8a8,8,0,0,0,8-8,12,12,0,1,1,12,12,8,8,0,0,0,0,16,28,28,0,1,0-25.9-38h-62.6l-3.69-16H188a8,8,0,0,0,7.8-6.24l24-104A8,8,0,0,0,223.69,60.47Z"/></svg>
+            Add to Cart
+          </button>
+        </article>
+        <article class="product-card" data-product-collections="festive-edit" data-quick-view-description="A tailored silhouette in rich brocade, woven with a subtle sheen that catches the light without ever feeling loud.">
+          <div class="product-card__media">
+            <a href="#" class="product-card__image-link" data-quick-view-trigger aria-label="View Brocade Jacket">
+              <img class="product-card__image--primary" src="../theme/assets/product-brocade-jacket.png" alt="Brocade Jacket" loading="lazy">
+              <img class="product-card__image--secondary" src="../theme/assets/product-brocade-jacket-alt.png" alt="Brocade Jacket" loading="lazy">
+            </a>
+            <button type="button" class="product-card__wishlist" data-wishlist-toggle data-product-id="3" aria-label="Add Brocade Jacket to wishlist" aria-pressed="false">
+              <span class="product-card__wishlist-icon product-card__wishlist-icon--outline"><svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40A62.07,62.07,0,0,0,16,102c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40Z"/></svg></span><span class="product-card__wishlist-icon product-card__wishlist-icon--filled"><svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M240,102c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,228.66,16,172,16,102A62.07,62.07,0,0,1,78,40c20.65,0,38.73,8.88,50,23.89C139.27,48.88,157.35,40,178,40A62.07,62.07,0,0,1,240,102Z"/></svg></span>
+            </button>
+            <button type="button" class="product-card__quick-view" data-quick-view-trigger>Quick View</button>
+          </div>
+          <h3 class="product-card__title"><a href="#" data-quick-view-trigger>Brocade Jacket</a></h3>
+          <div class="product-card__price-row"><p class="product-card__price">₹8,500.00</p></div>
+          <button type="button" class="btn btn--primary product-card__add" data-add-to-cart data-product-id="brocade-jacket" data-product-price="850000" data-product-image="../theme/assets/product-brocade-jacket.png">
+            <svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M136,104V72a8,8,0,0,0-16,0v32H88a8,8,0,0,0,0,16h32v32a8,8,0,0,0,16,0V120h32a8,8,0,0,0,0-16Z"/><path d="M223.69,60.47A8,8,0,0,0,217.05,56H54.22L45.86,24.21A8,8,0,0,0,37.83,18H16a8,8,0,0,0,0,16H31.34L58.77,146.1a28,28,0,1,0,37.46,25.9h39.55a27.69,27.69,0,0,0-2.78,16H88a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16H96a12,12,0,1,1,12-12,8,8,0,0,0,8,8h8a8,8,0,0,0,8-8,12,12,0,1,1,12,12,8,8,0,0,0,0,16,28,28,0,1,0-25.9-38h-62.6l-3.69-16H188a8,8,0,0,0,7.8-6.24l24-104A8,8,0,0,0,223.69,60.47Z"/></svg>
+            Add to Cart
+          </button>
+        </article>
+        <article class="product-card" data-product-collections="accessories" data-quick-view-description="Classic kundan-set drops in gold, light enough for daily wear and refined enough for an evening occasion.">
+          <div class="product-card__media">
+            <a href="#" class="product-card__image-link" data-quick-view-trigger aria-label="View Kundan Earrings">
+              <img class="product-card__image--primary" src="../theme/assets/product-kundan-earrings.png" alt="Kundan Earrings" loading="lazy">
+              <img class="product-card__image--secondary" src="../theme/assets/product-kundan-earrings-alt.png" alt="Kundan Earrings" loading="lazy">
+            </a>
+            <button type="button" class="product-card__wishlist" data-wishlist-toggle data-product-id="4" aria-label="Add Kundan Earrings to wishlist" aria-pressed="false">
+              <span class="product-card__wishlist-icon product-card__wishlist-icon--outline"><svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40A62.07,62.07,0,0,0,16,102c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40Z"/></svg></span><span class="product-card__wishlist-icon product-card__wishlist-icon--filled"><svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M240,102c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,228.66,16,172,16,102A62.07,62.07,0,0,1,78,40c20.65,0,38.73,8.88,50,23.89C139.27,48.88,157.35,40,178,40A62.07,62.07,0,0,1,240,102Z"/></svg></span>
+            </button>
+            <button type="button" class="product-card__quick-view" data-quick-view-trigger>Quick View</button>
+          </div>
+          <h3 class="product-card__title"><a href="#" data-quick-view-trigger>Kundan Earrings</a></h3>
+          <div class="product-card__price-row"><p class="product-card__price">₹1,800.00</p></div>
+          <button type="button" class="btn btn--primary product-card__add" data-add-to-cart data-product-id="kundan-earrings" data-product-price="180000" data-product-image="../theme/assets/product-kundan-earrings.png">
+            <svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M136,104V72a8,8,0,0,0-16,0v32H88a8,8,0,0,0,0,16h32v32a8,8,0,0,0,16,0V120h32a8,8,0,0,0,0-16Z"/><path d="M223.69,60.47A8,8,0,0,0,217.05,56H54.22L45.86,24.21A8,8,0,0,0,37.83,18H16a8,8,0,0,0,0,16H31.34L58.77,146.1a28,28,0,1,0,37.46,25.9h39.55a27.69,27.69,0,0,0-2.78,16H88a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16H96a12,12,0,1,1,12-12,8,8,0,0,0,8,8h8a8,8,0,0,0,8-8,12,12,0,1,1,12,12,8,8,0,0,0,0,16,28,28,0,1,0-25.9-38h-62.6l-3.69-16H188a8,8,0,0,0,7.8-6.24l24-104A8,8,0,0,0,223.69,60.47Z"/></svg>
+            Add to Cart
+          </button>
+        </article>
+      </div>
+      <p class="product-grid__empty" data-product-grid-empty hidden>No products in this category yet.</p>
+    </div>
+  </section>
+
+  <section class="brand-story" id="our-story">
+    <div class="container brand-story__row brand-story__row--image-left">
+      <div class="brand-story__media reveal"><img src="../theme/assets/story-rooted-in-craft.png" alt="Rooted in Craft" loading="lazy"></div>
+      <div class="brand-story__content reveal">
+        <p class="eyebrow">01 — The Craft</p>
+        <h2 class="h2">Rooted in Craft</h2>
+        <p class="body-text">Every piece is made with techniques passed down through generations.</p>
+        <a href="#" class="text-link">Discover the Story <svg viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" style="transform: scaleX(-1)"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></a>
+      </div>
+    </div>
+    <div class="container brand-story__row brand-story__row--image-right">
+      <div class="brand-story__media reveal"><img src="../theme/assets/story-made-to-last.png" alt="Made to Last" loading="lazy"></div>
+      <div class="brand-story__content reveal">
+        <p class="eyebrow">02 — The Materials</p>
+        <h2 class="h2">Made to Last</h2>
+        <p class="body-text">We choose materials for how they age, not just how they look on day one.</p>
+        <a href="#" class="text-link">See Our Process <svg viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" style="transform: scaleX(-1)"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></a>
+      </div>
+    </div>
+    <div class="container brand-story__row brand-story__row--image-left">
+      <div class="brand-story__media reveal"><img src="../theme/assets/story-a-modern-heritage.png" alt="A Modern Heritage" loading="lazy"></div>
+      <div class="brand-story__content reveal">
+        <p class="eyebrow">03 — The Silhouette</p>
+        <h2 class="h2">A Modern Heritage</h2>
+        <p class="body-text">Classic silhouettes, reimagined for how you actually dress today.</p>
+        <a href="#" class="text-link">Explore the Edit <svg viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" style="transform: scaleX(-1)"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="info-overlay" data-info-overlay hidden>
+    <div class="container info-overlay__header">
+      <p class="info-overlay__breadcrumb"><a href="#">Home</a> / <span data-info-breadcrumb-current></span></p>
+      <a href="#" class="info-overlay__back" data-info-back>&larr; Back to Shop</a>
+    </div>
+    <div class="container">
+
+      <section class="info-page" data-info-page="shipping" hidden>
+        <h1 class="h1">Shipping</h1>
+        <p class="info-page__notice">Demo content for this interview project &mdash; not an active shipping policy. A live store would confirm real rates and carriers here.</p>
+        <p>Orders are processed within 2&ndash;3 business days. Once dispatched, you'll receive a tracking link by email.</p>
+        <h2>Domestic Delivery</h2>
+        <ul>
+          <li>4&ndash;7 business days</li>
+          <li>Free on orders over &#8377;5,000</li>
+          <li>&#8377;150 flat rate below that threshold</li>
+        </ul>
+        <h2>International Delivery</h2>
+        <ul>
+          <li>10&ndash;18 business days, depending on destination</li>
+          <li>Duties and import taxes are the recipient's responsibility</li>
+        </ul>
+        <a href="#/info/contact" class="text-link">Questions about an order? Contact us &rarr;</a>
+      </section>
+
+      <section class="info-page" data-info-page="returns" hidden>
+        <h1 class="h1">Returns &amp; Exchanges</h1>
+        <p class="info-page__notice">Demo content for this interview project &mdash; not an active returns policy.</p>
+        <p>Items can be returned within 14 days of delivery, unworn and in their original packaging.</p>
+        <h2>Not eligible for return</h2>
+        <ul>
+          <li>Earrings and other pierced jewelry, for hygiene reasons</li>
+          <li>Made-to-order or customized pieces</li>
+          <li>Items marked final sale at checkout</li>
+        </ul>
+        <h2>How to start a return</h2>
+        <p>Email us with your order number and we'll send return instructions within one business day.</p>
+        <a href="#/info/contact" class="text-link">Start a return &rarr;</a>
+      </section>
+
+      <section class="info-page" data-info-page="faq" hidden>
+        <h1 class="h1">Frequently Asked Questions</h1>
+        <details class="info-page__faq-item">
+          <summary>How do I check my order status?</summary>
+          <p>You'll receive a tracking link by email once your order ships. For anything else, reach out via the Contact page.</p>
+        </details>
+        <details class="info-page__faq-item">
+          <summary>Do you ship internationally?</summary>
+          <p>Yes &mdash; see the Shipping page for estimated delivery windows by region.</p>
+        </details>
+        <details class="info-page__faq-item">
+          <summary>How do I care for embroidered pieces?</summary>
+          <p>Dry clean only, stored flat or on a padded hanger, away from direct sunlight to preserve the threadwork.</p>
+        </details>
+        <details class="info-page__faq-item">
+          <summary>Can I cancel or change my order?</summary>
+          <p>Contact us within 2 hours of placing your order and we'll do our best to amend it before it's processed.</p>
+        </details>
+        <details class="info-page__faq-item">
+          <summary>Do you offer gift wrapping?</summary>
+          <p>Gift wrapping can be requested at checkout for a small additional fee.</p>
+        </details>
+      </section>
+
+      <section class="info-page" data-info-page="contact" hidden>
+        <h1 class="h1">Contact Us</h1>
+        <p>
+          <a href="mailto:hello@heritage.com" class="text-link">hello@heritage.com</a><br>
+          <a href="tel:+15550100100" class="text-link">+1 (555) 010-0100</a>
+        </p>
+        <form data-info-demo-form>
+          <div data-info-form-fields class="info-page__form">
+            <div class="info-page__field">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" required>
+            </div>
+            <div class="info-page__field">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" required>
+            </div>
+            <div class="info-page__field">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width: fit-content;">Send Message</button>
+            <p style="font-size: 12px; color: var(--color-muted-foreground); margin: 0;">This is a demo form &mdash; messages aren't actually sent.</p>
+          </div>
+          <p class="info-page__form-success" data-info-form-success hidden>Thank you &mdash; this is a demo confirmation. In the live theme, this would submit to Shopify's contact form.</p>
+        </form>
+      </section>
+
+      <section class="info-page" data-info-page="about" hidden>
+        <h1 class="h1">About Heritage</h1>
+        <p>Heritage began as an idea: that the techniques behind embroidery, weaving and metalwork passed down through generations deserve a place in how people dress today, not just in archives.</p>
+        <p>Every collection pairs traditional craft &mdash; zardozi threadwork, kundan setting, hand-loomed textiles &mdash; with silhouettes built for how people actually live and dress now.</p>
+        <a href="#/info/sustainability" class="text-link">Read about our materials &rarr;</a>
+      </section>
+
+      <section class="info-page" data-info-page="careers" hidden>
+        <h1 class="h1">Careers</h1>
+        <p>We're a small team and don't have open roles listed right now. If you'd like to introduce yourself for future opportunities, we'd still love to hear from you.</p>
+        <a href="#/info/contact" class="text-link">Get in touch &rarr;</a>
+      </section>
+
+      <section class="info-page" data-info-page="press" hidden>
+        <h1 class="h1">Press</h1>
+        <p>For press inquiries, interview requests, or image assets, please reach out directly and we'll get back to you as soon as possible.</p>
+        <a href="#/info/contact" class="text-link">Contact our team &rarr;</a>
+      </section>
+
+      <section class="info-page" data-info-page="sustainability" hidden>
+        <h1 class="h1">Sustainability</h1>
+        <p class="info-page__notice">Demo content for this interview project. A live store would describe its actual sourcing and certifications here rather than general statements.</p>
+        <p>We favor natural fibers &mdash; silk, cotton and leather &mdash; chosen for how they wear and age, not just how they photograph on day one.</p>
+        <p>Where possible, we work with artisan groups who specialize in specific regional techniques, aiming to keep that craft economically viable rather than treating it as a one-off motif.</p>
+      </section>
+
+      <section class="info-page" data-info-page="privacy" hidden>
+        <h1 class="h1">Privacy Policy</h1>
+        <p class="info-page__notice">Demo content for this interview project &mdash; not a legally reviewed privacy policy. A live store's policy must be supplied or approved by the merchant.</p>
+        <p>A real policy here would cover, at minimum:</p>
+        <ul>
+          <li>What personal information is collected (account, order and browsing data)</li>
+          <li>How that information is used and who it may be shared with (e.g. payment and shipping providers)</li>
+          <li>Cookie and tracking technology usage</li>
+          <li>How customers can access, correct or delete their data</li>
+          <li>Contact details for privacy-related requests</li>
+        </ul>
+      </section>
+
+      <section class="info-page" data-info-page="terms" hidden>
+        <h1 class="h1">Terms of Service</h1>
+        <p class="info-page__notice">Demo content for this interview project &mdash; not legally reviewed terms. A live store's terms must be supplied or approved by the merchant.</p>
+        <p>A real terms page would cover order acceptance, pricing and availability, payment terms, intended use of the site, and limitation of liability, among other standard commerce terms.</p>
+      </section>
+
+      <section class="info-page" data-info-page="accessibility" hidden>
+        <h1 class="h1">Accessibility Statement</h1>
+        <p>We aim to build a site that's usable with a keyboard alone, works with screen readers, respects reduced-motion preferences, and maintains readable color contrast throughout.</p>
+        <p>If you run into an accessibility barrier anywhere on this site, please let us know so we can fix it.</p>
+        <a href="#/info/contact" class="text-link">Report an issue &rarr;</a>
+      </section>
+
+      <section class="info-page" data-info-page="cookies" hidden>
+        <h1 class="h1">Cookie Policy</h1>
+        <p class="info-page__notice">Demo content for this interview project.</p>
+        <p>A live store would typically use cookies for:</p>
+        <ul>
+          <li><strong>Essential:</strong> keeping your cart and session working</li>
+          <li><strong>Analytics:</strong> understanding how the site is used, in aggregate</li>
+          <li><strong>Preferences:</strong> remembering choices like currency or region</li>
+        </ul>
+        <p>Cookie preference controls would appear here where implemented.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="footer-divider">
+    <p>Heritage, Reimagined</p>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <span class="h2">Heritage</span>
+        <p class="body-text">Heritage-inspired, modern essentials.</p>
+        <p class="body-text">
+          <a href="mailto:hello@heritage.com" class="site-footer__contact-link">hello@heritage.com</a><br>
+          <a href="tel:+15550100100" class="site-footer__contact-link">+1 (555) 010-0100</a>
+        </p>
+        <div class="site-footer__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM180,76a12,12,0,1,1-12-12A12,12,0,0,1,180,76Z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,176V165.3h26.3l4.3-26.6H136V121.5c0-11.2,3.5-18.8,19.3-18.8h17.2V79.2c-3-.4-13.2-1.3-25.1-1.3-24.8,0-41.9,15.1-41.9,42.9v19.9H79.4v26.6h26.1V200a80,80,0,1,1,30.5,0Z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M224,80a56.06,56.06,0,0,1-56-56,8,8,0,0,0-8-8H128a8,8,0,0,0-8,8V168a24,24,0,1,1-32-22.6,8,8,0,0,0,6-7.7V104a8,8,0,0,0-9.4-7.9A72,72,0,1,0,176,168V111.1A95.6,95.6,0,0,0,224,124a8,8,0,0,0,8-8V88A8,8,0,0,0,224,80Z"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M218.1,208,151.3,106.9,211.4,40h-25l-49.5,56.3L95.2,40H40.9l64.2,97.1L41.9,208h25l53.1-60.4,45.9,60.4Z"/></svg></a>
+        </div>
+      </div>
+      <div class="site-footer__col">
+        <h3>Shop</h3>
+        <ul><li><a href="#shop" data-nav-tab-trigger="new-arrivals">New Arrivals</a></li><li><a href="#shop" data-nav-tab-trigger="best-sellers">Best Sellers</a></li><li><a href="#shop" data-nav-tab-trigger="festive-edit">Festive Edit</a></li><li><a href="#shop" data-nav-tab-trigger="accessories">Accessories</a></li></ul>
+      </div>
+      <div class="site-footer__col">
+        <h3>Help</h3>
+        <ul><li><a href="#/info/shipping">Shipping</a></li><li><a href="#/info/returns">Returns</a></li><li><a href="#/info/faq">FAQ</a></li><li><a href="#/info/contact">Contact</a></li></ul>
+      </div>
+      <div class="site-footer__col">
+        <h3>Company</h3>
+        <ul><li><a href="#/info/about">About</a></li><li><a href="#/info/careers">Careers</a></li><li><a href="#/info/press">Press</a></li><li><a href="#/info/sustainability">Sustainability</a></li></ul>
+      </div>
+      <div class="site-footer__col">
+        <h3>Legal</h3>
+        <ul><li><a href="#/info/privacy">Privacy</a></li><li><a href="#/info/terms">Terms</a></li><li><a href="#/info/accessibility">Accessibility</a></li><li><a href="#/info/cookies">Cookies</a></li></ul>
+      </div>
+      <div class="site-footer__newsletter">
+        <h3>Stay Connected</h3>
+        <p class="site-footer__newsletter-copy">Be first to know about new collections and private previews.</p>
+        <form data-newsletter-form>
+          <div class="site-footer__newsletter-field">
+            <label for="footer-newsletter-email" class="visually-hidden">Email address</label>
+            <input type="email" id="footer-newsletter-email" placeholder="Email address" required>
+            <button type="submit" aria-label="Subscribe">
+              <svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" style="transform: scaleX(-1)"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg>
+            </button>
+          </div>
+          <p class="site-footer__newsletter-success" data-newsletter-success hidden>Thank you for subscribing.</p>
+        </form>
+      </div>
+    </div>
+    <div class="container site-footer__bottom">
+      <p>&copy; 2026 Heritage. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Sections are appended here, one per checkpoint. -->
+
+  <div class="cart-drawer" data-cart-drawer hidden>
+    <div class="cart-drawer__backdrop" data-cart-drawer-backdrop></div>
+    <div class="cart-drawer__panel" role="dialog" aria-modal="true" aria-label="Shopping cart" id="cart-drawer-panel">
+      <div class="cart-drawer__header">
+        <h2 class="h2">Your Cart</h2>
+        <button type="button" class="cart-drawer__close" data-cart-drawer-close aria-label="Close cart">
+          <svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+        </button>
+      </div>
+      <div class="cart-drawer__items" data-cart-drawer-items></div>
+      <p class="cart-drawer__empty" data-cart-drawer-empty>Your cart is empty.</p>
+      <div class="cart-drawer__footer" data-cart-drawer-footer hidden>
+        <div class="cart-drawer__subtotal">
+          <span>Subtotal</span>
+          <span data-cart-drawer-subtotal>₹0.00</span>
+        </div>
+        <a href="#" class="btn btn--primary cart-drawer__checkout" data-cart-drawer-checkout>Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="quick-view" data-quick-view-modal hidden>
+    <div class="quick-view__backdrop" data-quick-view-backdrop></div>
+    <div class="quick-view__panel" role="dialog" aria-modal="true" aria-label="Quick view">
+      <button type="button" class="quick-view__close" data-quick-view-close aria-label="Close quick view">
+        <svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+      </button>
+      <div class="quick-view__media">
+        <img data-quick-view-image alt="" width="600" height="800">
+      </div>
+      <div class="quick-view__details">
+        <p class="product-card__badge" data-quick-view-badge hidden></p>
+        <h2 class="h2" data-quick-view-title></h2>
+        <div class="product-card__price-row">
+          <p class="product-card__price" data-quick-view-price></p>
+          <p class="product-card__compare-price" data-quick-view-compare hidden></p>
+        </div>
+        <p class="body-text quick-view__description" data-quick-view-description></p>
+        <div class="quick-view__qty">
+          <span class="quick-view__qty-label">Quantity</span>
+          <div class="quick-view__qty-controls">
+            <button type="button" data-quick-view-qty-decrease aria-label="Decrease quantity">&minus;</button>
+            <span data-quick-view-qty>1</span>
+            <button type="button" data-quick-view-qty-increase aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+        <div class="quick-view__actions">
+          <button type="button" class="btn btn--primary quick-view__add" data-quick-view-add>
+            <svg viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M136,104V72a8,8,0,0,0-16,0v32H88a8,8,0,0,0,0,16h32v32a8,8,0,0,0,16,0V120h32a8,8,0,0,0,0-16Z"/><path d="M223.69,60.47A8,8,0,0,0,217.05,56H54.22L45.86,24.21A8,8,0,0,0,37.83,18H16a8,8,0,0,0,0,16H31.34L58.77,146.1a28,28,0,1,0,37.46,25.9h39.55a27.69,27.69,0,0,0-2.78,16H88a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16H96a12,12,0,1,1,12-12,8,8,0,0,0,8,8h8a8,8,0,0,0,8-8,12,12,0,1,1,12,12,8,8,0,0,0,0,16,28,28,0,1,0-25.9-38h-62.6l-3.69-16H188a8,8,0,0,0,7.8-6.24l24-104A8,8,0,0,0,223.69,60.47Z"/></svg>
+            Add to Cart
+          </button>
+          <button type="button" class="product-card__wishlist quick-view__wishlist" data-quick-view-wishlist aria-label="Add to wishlist" aria-pressed="false">
+            <span class="product-card__wishlist-icon product-card__wishlist-icon--outline"><svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40A62.07,62.07,0,0,0,16,102c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40Z"/></svg></span><span class="product-card__wishlist-icon product-card__wishlist-icon--filled"><svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M240,102c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,228.66,16,172,16,102A62.07,62.07,0,0,1,78,40c20.65,0,38.73,8.88,50,23.89C139.27,48.88,157.35,40,178,40A62.07,62.07,0,0,1,240,102Z"/></svg></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="header.js" defer></script>
+  <script src="tabs.js" defer></script>
+  <script src="slider.js" defer></script>
+  <script src="wishlist.js" defer></script>
+  <script src="reveal.js" defer></script>
+  <script src="quick-view.js" defer></script>
+  <script src="router.js" defer></script>
+  <script src="demo.js" defer></script>
+</body>
+</html>

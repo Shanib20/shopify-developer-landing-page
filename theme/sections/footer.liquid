@@ -1,0 +1,118 @@
+<div class="footer-divider">
+  <p>{{ section.settings.divider_text }}</p>
+</div>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      {% if section.settings.logo %}
+        {{ section.settings.logo | image_url: width: 140 | image_tag: alt: shop.name }}
+      {% else %}
+        <span class="h2">{{ shop.name }}</span>
+      {% endif %}
+      <p class="body-text">{{ section.settings.description }}</p>
+      <p class="body-text">
+        {% if section.settings.contact_email != blank %}<a href="mailto:{{ section.settings.contact_email }}" class="site-footer__contact-link">{{ section.settings.contact_email }}</a><br>{% endif %}
+        {% if section.settings.contact_phone != blank %}<a href="tel:{{ section.settings.contact_phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' }}" class="site-footer__contact-link">{{ section.settings.contact_phone }}</a>{% endif %}
+      </p>
+      <div class="site-footer__social">
+        {% for block in section.blocks %}
+          <a href="{{ block.settings.url | default: '#' }}" {% if block.settings.url != blank %}target="_blank" rel="noopener noreferrer"{% endif %} aria-label="{{ block.settings.network | capitalize }}, opens in a new tab">
+            {% render 'icon-social', network: block.settings.network %}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% for i in (1..4) %}
+      {% assign menu_setting = 'menu_' | append: i %}
+      <div class="site-footer__col">
+        <h3>{{ section.settings[menu_setting].title | default: 'Links' }}</h3>
+        <ul>
+          {% for link in section.settings[menu_setting].links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+
+    <div class="site-footer__newsletter">
+      <h3>Stay Connected</h3>
+      <p class="site-footer__newsletter-copy">Be first to know about new collections and private previews.</p>
+      {% form 'customer', id: 'footer-newsletter-form' %}
+        {% if form.posted_successfully? %}
+          <p class="site-footer__newsletter-success">Thank you for subscribing.</p>
+        {% else %}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div class="site-footer__newsletter-field">
+            <label for="footer-newsletter-email" class="visually-hidden">Email address</label>
+            <input type="email" name="contact[email]" id="footer-newsletter-email" placeholder="Email address" required>
+            <button type="submit" aria-label="Subscribe">
+              {% render 'icon-caret', direction: 'right', size: 16 %}
+            </button>
+          </div>
+          {% if form.errors %}
+            <p class="site-footer__newsletter-error">Please enter a valid email address.</p>
+          {% endif %}
+        {% endif %}
+      {% endform %}
+    </div>
+  </div>
+
+  <div class="container site-footer__bottom">
+    <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
+  </div>
+</footer>
+
+{{ 'footer.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "divider_text", "label": "Divider statement", "default": "Heritage, Reimagined" },
+    { "type": "image_picker", "id": "logo", "label": "Logo" },
+    { "type": "textarea", "id": "description", "label": "Brand description", "default": "Heritage-inspired, modern essentials." },
+    { "type": "text", "id": "contact_email", "label": "Contact email" },
+    { "type": "text", "id": "contact_phone", "label": "Contact phone" },
+    { "type": "link_list", "id": "menu_1", "label": "Menu column 1", "default": "footer" },
+    { "type": "link_list", "id": "menu_2", "label": "Menu column 2", "default": "footer" },
+    { "type": "link_list", "id": "menu_3", "label": "Menu column 3", "default": "footer" },
+    { "type": "link_list", "id": "menu_4", "label": "Menu column 4", "default": "footer" }
+  ],
+  "blocks": [
+    {
+      "type": "social",
+      "name": "Social link",
+      "settings": [
+        { "type": "select", "id": "network", "label": "Network", "options": [
+          { "value": "instagram", "label": "Instagram" },
+          { "value": "facebook", "label": "Facebook" },
+          { "value": "tiktok", "label": "TikTok" },
+          { "value": "x", "label": "X" }
+        ] },
+        { "type": "url", "id": "url", "label": "URL" }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "social", "settings": { "network": "instagram" } },
+      { "type": "social", "settings": { "network": "facebook" } },
+      { "type": "social", "settings": { "network": "tiktok" } },
+      { "type": "social", "settings": { "network": "x" } }
+    ]
+  },
+  "presets": [
+    {
+      "name": "Footer",
+      "blocks": [
+        { "type": "social", "settings": { "network": "instagram" } },
+        { "type": "social", "settings": { "network": "facebook" } },
+        { "type": "social", "settings": { "network": "tiktok" } },
+        { "type": "social", "settings": { "network": "x" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

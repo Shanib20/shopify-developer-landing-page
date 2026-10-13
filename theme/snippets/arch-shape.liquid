@@ -1,0 +1,6 @@
+{% comment %} Renders a Mughal-arch shaped tab background behind {{ label }} content: straight sides rising to ~60% height, then curving inward to a shallow point. {% endcomment %}
+<svg class="arch-shape {% if active %}arch-shape--active{% endif %}" viewBox="0 0 200 70" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M4,70 L4,42 C4,30 30,22 70,16 C85,10 100,6 100,6 C100,6 115,10 130,16 C170,22 196,30 196,42 L196,70 Z"
+        fill="{% if active %}var(--color-accent){% else %}var(--color-muted){% endif %}"
+        stroke="var(--color-accent-deep)" stroke-width="{% if active %}0{% else %}1{% endif %}"/>
+</svg>

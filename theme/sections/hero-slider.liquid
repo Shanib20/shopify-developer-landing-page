@@ -1,0 +1,79 @@
+<section class="hero-slider" data-hero-slider aria-roledescription="carousel" aria-label="Featured collections">
+  <div class="hero-slider__track">
+    {% for block in section.blocks %}
+      {% assign default_asset = block.settings.heading | handleize | prepend: 'hero-' | append: '.png' %}
+      <div class="hero-slider__slide {% if forloop.first %}is-active{% endif %}" data-slide aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}">
+        {% if block.settings.image %}
+          {% if forloop.first %}
+            {{ block.settings.image | image_url: width: 1920 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '768,1200,1920', alt: block.settings.heading }}
+          {% else %}
+            {{ block.settings.image | image_url: width: 1920 | image_tag: loading: 'lazy', widths: '768,1200,1920', alt: block.settings.heading }}
+          {% endif %}
+        {% else %}
+          <img src="{{ default_asset | asset_url }}" alt="{{ block.settings.heading }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" width="2100" height="900">
+        {% endif %}
+        <div class="hero-slider__scrim"></div>
+        <div class="hero-slider__content container">
+          {% if block.settings.eyebrow != blank %}
+            <p class="hero-slider__eyebrow">{{ block.settings.eyebrow }}</p>
+          {% endif %}
+          <h2 class="h1">{{ block.settings.heading }}</h2>
+          <p class="body-text">{{ block.settings.subtext }}</p>
+          {% if block.settings.cta_label != blank %}
+            <a href="{{ block.settings.cta_url | default: '#shop' }}" {% if block.settings.tab_handle != blank %}data-nav-tab-trigger="{{ block.settings.tab_handle }}"{% endif %} class="btn btn--primary hero-slider__cta">{{ block.settings.cta_label }} {% render 'icon-caret', direction: 'right', size: 14 %}</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <button type="button" class="hero-slider__arrow hero-slider__arrow--prev" data-slide-prev aria-label="Previous slide">{% render 'icon-caret', direction: 'left' %}</button>
+  <button type="button" class="hero-slider__arrow hero-slider__arrow--next" data-slide-next aria-label="Next slide">{% render 'icon-caret', direction: 'right' %}</button>
+
+  <div class="hero-slider__dots" aria-label="Choose slide">
+    {% for block in section.blocks %}
+      <button type="button" class="hero-slider__dot {% if forloop.first %}is-active{% endif %}" data-slide-dot aria-label="Go to slide {{ forloop.index }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+        <span class="hero-slider__dot-progress" data-slide-progress></span>
+      </button>
+    {% endfor %}
+  </div>
+</section>
+
+{{ 'hero-slider.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'slider.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Hero slider",
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Slide image" },
+        { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The Autumn / Winter Collection" },
+        { "type": "text", "id": "heading", "label": "Heading", "default": "The Festive Edit" },
+        { "type": "text", "id": "subtext", "label": "Subtext", "default": "Heritage-inspired pieces for the season." },
+        { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Explore the Collection" },
+        { "type": "url", "id": "cta_url", "label": "CTA link" },
+        { "type": "text", "id": "tab_handle", "label": "Matching tab handle (optional)", "info": "If set, clicking the CTA pre-selects this tab in the category tabs section." }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "slide", "settings": { "eyebrow": "The Autumn / Winter Collection", "heading": "The Festive Edit", "subtext": "Heritage-inspired pieces for the season.", "cta_label": "Explore the Collection", "tab_handle": "festive-edit" } },
+      { "type": "slide", "settings": { "eyebrow": "Just In", "heading": "New Arrivals", "subtext": "Fresh silhouettes, timeless craft.", "cta_label": "Shop New Arrivals", "tab_handle": "new-arrivals" } }
+    ]
+  },
+  "presets": [
+    {
+      "name": "Hero slider",
+      "blocks": [
+        { "type": "slide", "settings": { "eyebrow": "The Autumn / Winter Collection", "heading": "The Festive Edit", "subtext": "Heritage-inspired pieces for the season.", "cta_label": "Explore the Collection", "tab_handle": "festive-edit" } },
+        { "type": "slide", "settings": { "eyebrow": "Just In", "heading": "New Arrivals", "subtext": "Fresh silhouettes, timeless craft.", "cta_label": "Shop New Arrivals", "tab_handle": "new-arrivals" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
